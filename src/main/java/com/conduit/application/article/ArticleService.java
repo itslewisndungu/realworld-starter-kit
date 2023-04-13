@@ -1,8 +1,7 @@
-package com.conduit.services;
+package com.conduit.application.article;
 
-import com.conduit.dto.ArticleDto;
-import com.conduit.models.Article;
-import com.conduit.repositories.ArticleRepository;
+import com.conduit.domain.article.Article;
+import com.conduit.domain.article.ArticleRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

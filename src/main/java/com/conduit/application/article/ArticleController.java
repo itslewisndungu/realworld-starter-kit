@@ -1,8 +1,6 @@
-package com.conduit.controllers;
+package com.conduit.application.article;
 
-import com.conduit.dto.ArticleDto;
-import com.conduit.models.Article;
-import com.conduit.services.ArticleService;
+import com.conduit.domain.article.Article;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,5 @@
-package com.conduit.models;
+package com.conduit.domain.article;
+
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -24,13 +25,13 @@ public class Article {
     @Column(nullable = false, unique = true)
     private String slug;
 
-    @Column(nullable = false )
+    @Column(nullable = false)
     private String title;
 
-    @Column(nullable = false )
+    @Column(nullable = false)
     private String description;
 
-    @Column(nullable = false )
+    @Column(nullable = false)
     private String body;
 
     @CreatedDate
