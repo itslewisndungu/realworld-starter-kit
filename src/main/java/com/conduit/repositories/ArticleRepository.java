@@ -1,4 +1,4 @@
-package com.conduit.models.repositories;
+package com.conduit.repositories;
 
 import com.conduit.models.Article;
 import org.springframework.data.jpa.repository.JpaRepository;
