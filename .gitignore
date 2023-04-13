@@ -57,6 +57,7 @@ bin/
 ### IntelliJ IDEA ###
 .idea
 *.iws
+*.http
 *.iml
 *.ipr
 out/
