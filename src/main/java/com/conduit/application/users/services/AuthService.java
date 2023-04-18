@@ -3,7 +3,6 @@ package com.conduit.application.users.services;
 import com.conduit.application.users.dtos.UserDto;
 import com.conduit.application.users.requests.SignInRequest;
 import com.conduit.application.users.requests.SignUpRequest;
-import com.conduit.domain.user.AuthorityRepository;
 import com.conduit.domain.user.User;
 import com.conduit.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +16,6 @@ public class AuthService {
     private final JwtService jwtService;
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-    private final AuthorityRepository authorityRepository;
 
     public UserDto signIn(SignInRequest request) {
         return userRepository

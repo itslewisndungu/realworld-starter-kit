@@ -34,14 +34,6 @@ public class User {
     @Transient
     private String token;
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "user_authority",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "authority_id")
-    )
-    private List<Authority> authorities;
-
     @OneToMany(mappedBy = "author")
     private List<Article> articles;
 
