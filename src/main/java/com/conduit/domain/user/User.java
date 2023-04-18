@@ -1,5 +1,6 @@
 package com.conduit.domain.user;
 
+import com.conduit.domain.content.Article;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -35,4 +36,7 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "authority_id")
     )
     private List<Authority> authorities;
+
+    @OneToMany(mappedBy = "user")
+    private List<Article> articles;
 }

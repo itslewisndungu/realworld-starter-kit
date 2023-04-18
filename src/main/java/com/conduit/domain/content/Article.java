@@ -1,15 +1,14 @@
-package com.conduit.domain.article;
+package com.conduit.domain.content;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import com.conduit.domain.user.User;
+import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
+import java.util.List;
 
 @Entity
 @Setter
@@ -35,8 +34,17 @@ public class Article {
     private String body;
 
     @CreatedDate
-    private LocalDateTime createdAt;
+    @Temporal(value = TemporalType.TIMESTAMP)
+    private Instant createdAt;
 
     @LastModifiedDate
-    private LocalDateTime updatedAt;
+    @Temporal(value = TemporalType.TIMESTAMP)
+    private Instant updatedAt;
+
+    @ManyToOne
+    @JoinColumn(name = "author_id")
+    private User author;
+
+    @OneToMany(mappedBy = "article")
+    private List<Comment> comments;
 }
