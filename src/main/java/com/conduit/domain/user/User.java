@@ -2,8 +2,7 @@ package com.conduit.domain.user;
 
 import com.conduit.domain.content.Article;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
@@ -11,6 +10,9 @@ import java.util.List;
 @Table(name = "users")
 @Setter
 @Getter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,6 +31,9 @@ public class User {
 
     private String image;
 
+    @Transient
+    private String token;
+
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "user_authority",
@@ -37,6 +42,7 @@ public class User {
     )
     private List<Authority> authorities;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "author")
     private List<Article> articles;
+
 }
