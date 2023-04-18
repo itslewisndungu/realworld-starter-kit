@@ -2,10 +2,7 @@ package com.conduit.application.auth.dtos;
 
 import com.conduit.domain.user.User;
 
-public record UserDto(
-        String email, String username, String bio, String token, String image
-) {
-
+public record UserDto(String email, String username, String bio, String token, String image) {
     public UserDto(User user) {
         this(
                 user.getEmail(),
