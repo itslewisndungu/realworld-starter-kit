@@ -1,8 +1,8 @@
-package com.conduit.application.auth.services;
+package com.conduit.application.users.services;
 
-import com.conduit.application.auth.dtos.UserDto;
-import com.conduit.application.auth.requests.SignInRequest;
-import com.conduit.application.auth.requests.SignUpRequest;
+import com.conduit.application.users.dtos.UserDto;
+import com.conduit.application.users.requests.SignInRequest;
+import com.conduit.application.users.requests.SignUpRequest;
 import com.conduit.domain.user.AuthorityRepository;
 import com.conduit.domain.user.User;
 import com.conduit.domain.user.UserRepository;

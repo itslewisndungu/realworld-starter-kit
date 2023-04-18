@@ -1,8 +1,7 @@
-package com.conduit.application.auth.services;
+package com.conduit.application.users.services;
 
 import com.conduit.domain.user.User;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.jwt.JwtClaimsSet;
 import org.springframework.security.oauth2.jwt.JwtEncoder;
 import org.springframework.security.oauth2.jwt.JwtEncoderParameters;

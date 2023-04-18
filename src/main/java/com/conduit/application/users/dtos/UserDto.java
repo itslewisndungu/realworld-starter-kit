@@ -1,4 +1,4 @@
-package com.conduit.application.auth.dtos;
+package com.conduit.application.users.dtos;
 
 import com.conduit.domain.user.User;
 
