@@ -5,6 +5,7 @@ import com.conduit.application.users.requests.SignUpRequest;
 import com.conduit.application.users.response.UserResponse;
 import com.conduit.application.users.services.AuthService;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,7 +22,7 @@ public class UsersController {
     private final AuthService authService;
 
     @PostMapping("/login")
-    public UserResponse getToken(@RequestBody SignInRequest req) {
+    public UserResponse getToken(@Valid @RequestBody SignInRequest req) {
         var user =  authService.signIn(req);
         return new UserResponse(user);
     }

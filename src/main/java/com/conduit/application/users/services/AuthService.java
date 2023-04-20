@@ -6,6 +6,8 @@ import com.conduit.application.users.requests.SignUpRequest;
 import com.conduit.domain.user.User;
 import com.conduit.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -16,16 +18,17 @@ public class AuthService {
     private final JwtService jwtService;
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+    SecurityContext securityContext = SecurityContextHolder.getContext();
 
-    public UserDto signIn(SignInRequest request) {
+    public User signIn(SignInRequest request) {
         return userRepository
-                .findByEmail(request.email())
-                .filter(user -> passwordEncoder.matches(request.password(), user.getPassword()))
+                .findByEmail(request.getEmail())
+                .filter(user -> passwordEncoder.matches(request.getPassword(), user.getPassword()))
                 .map(
                         user -> {
                             String token = jwtService.generateToken(user);
                             user.setToken(token);
-                            return new UserDto(user);
+                            return user;
                         }
                 )
                 .orElseThrow(() -> new UsernameNotFoundException("Invalid username or password"));
@@ -51,6 +54,5 @@ public class AuthService {
                 .build();
 
         return userRepository.save(user);
-
     }
 }
