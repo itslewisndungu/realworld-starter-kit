@@ -1,7 +1,9 @@
-package com.conduit.application.article;
+package com.conduit.application.article.services;
 
+import com.conduit.application.article.dtos.ArticleDto;
 import com.conduit.domain.content.Article;
 import com.conduit.domain.content.ArticleRepository;
+import com.conduit.domain.user.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -23,9 +25,10 @@ public class ArticleService {
         );
     }
 
-    public Article createNewArticle(ArticleDto article) {
+    public Article createNewArticle(ArticleDto article, User author) {
         Article newArticle = Article
                 .builder()
+                .author(author)
                 .slug(article.getSlug())
                 .title(article.getTitle())
                 .description(article.getDescription())

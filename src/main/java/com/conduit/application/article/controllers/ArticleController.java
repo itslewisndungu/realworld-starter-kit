@@ -1,6 +1,9 @@
-package com.conduit.application.article;
+package com.conduit.application.article.controllers;
 
+import com.conduit.application.article.services.ArticleService;
+import com.conduit.application.article.dtos.ArticleDto;
 import com.conduit.domain.content.Article;
+import com.conduit.domain.user.User;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -26,8 +29,8 @@ public class ArticleController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Article createArticle(@Valid @RequestBody ArticleDto article) {
-        return this.articleService.createNewArticle(article);
+    public Article createArticle(User author, @Valid @RequestBody ArticleDto article) {
+        return this.articleService.createNewArticle(article, author);
     }
 
     @PutMapping("/{slug}")

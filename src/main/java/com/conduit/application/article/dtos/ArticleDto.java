@@ -1,4 +1,4 @@
-package com.conduit.application.article;
+package com.conduit.application.article.dtos;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
