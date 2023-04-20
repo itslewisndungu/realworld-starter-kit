@@ -1,6 +1,6 @@
 package com.conduit.application.article;
 
-import com.conduit.domain.article.Article;
+import com.conduit.domain.content.Article;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

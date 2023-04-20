@@ -1,6 +1,5 @@
-package com.conduit.domain.article;
+package com.conduit.domain.content;
 
-import com.conduit.domain.article.Article;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
