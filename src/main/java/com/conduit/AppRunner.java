@@ -1,5 +1,7 @@
 package com.conduit;
 
+import com.conduit.domain.content.Article;
+import com.conduit.domain.content.ArticleRepository;
 import com.conduit.domain.user.User;
 import com.conduit.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -7,23 +9,23 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import java.util.Set;
-
 
 @Component
 @RequiredArgsConstructor
 public class AppRunner implements CommandLineRunner {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+    private final ArticleRepository articleRepository;
 
     @Override
     public void run(String... args) throws Exception {
         System.out.println("running the command line runner");
-        this.generateUser();
+        var user = this.generateUser();
+        this.generateArticle(user);
     }
 
-    private void generateUser() {
-        var user1 = User
+    private User generateUser() {
+        var user = User
                 .builder()
                 .email("lewis@gmail.com")
                 .username("lewiclancy")
@@ -32,24 +34,19 @@ public class AppRunner implements CommandLineRunner {
                 .password(passwordEncoder.encode("9326"))
                 .build();
 
-        var user2 = User
+        return userRepository.save(user);
+    }
+
+    private Article generateArticle(User author) {
+        var article = Article
                 .builder()
-                .email("lewisn@gmail.com")
-                .username("lewii")
-                .bio("long live the fucking king")
-                .image("https://localhost:3000")
-                .password(passwordEncoder.encode("9326"))
+                .author(author)
+                .slug("new-article")
+                .title("New Article")
+                .description("New generated article")
+                .body("This is the generated article")
                 .build();
 
-        userRepository.save(user1);
-        userRepository.save(user2);
-
-        user2.setFollowers(Set.of(user1));
-
-        userRepository.save(user1);
-        userRepository.save(user2);
-
-        System.out.println(user1.getFollowers());
-        System.out.println(user2.getFollowers());
+        return articleRepository.save(article);
     }
 }
