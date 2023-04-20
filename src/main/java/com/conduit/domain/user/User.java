@@ -2,7 +2,8 @@ package com.conduit.domain.user;
 
 import com.conduit.domain.content.Article;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
+import lombok.experimental.Accessors;
 
 import java.util.HashSet;
 import java.util.List;
@@ -10,11 +11,8 @@ import java.util.Set;
 
 @Entity
 @Table(name = "users")
-@Setter
-@Getter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
+@Data
+@Accessors(fluent = true, chain = true)
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

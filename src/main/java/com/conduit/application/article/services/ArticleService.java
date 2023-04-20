@@ -26,14 +26,12 @@ public class ArticleService {
     }
 
     public Article createNewArticle(ArticleDto article, User author) {
-        Article newArticle = Article
-                .builder()
+        Article newArticle = new Article()
                 .author(author)
                 .slug(article.getSlug())
                 .title(article.getTitle())
                 .description(article.getDescription())
-                .body(article.getBody())
-                .build();
+                .body(article.getBody());
 
         return this.repository.save(newArticle);
     }
@@ -43,9 +41,9 @@ public class ArticleService {
                 () -> new NoSuchElementException(String.format("Article with the slug %s not found", slug))
         );
 
-        oldArticle.setTitle(article.getTitle());
-        oldArticle.setBody(article.getBody());
-        oldArticle.setDescription(article.getDescription());
+        oldArticle.title(article.getTitle());
+        oldArticle.body(article.getBody());
+        oldArticle.description(article.getDescription());
 
         return this.repository.save(oldArticle);
     }

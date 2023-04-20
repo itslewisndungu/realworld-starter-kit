@@ -47,7 +47,7 @@ public class UserArgumentResolver implements HandlerMethodArgumentResolver {
         return userRepository
                 .findByEmail(email)
                 .map(it -> {
-                    it.setToken(token);
+                    it.token(token);
                     return it;
                 })
                 .orElseThrow(() -> new BadCredentialsException("Invalid token"));

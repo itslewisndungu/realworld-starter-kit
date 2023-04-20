@@ -36,7 +36,7 @@ public class UsersController {
         return new ModelAndView(
                 "redirect:/users/login",
                 "user",
-                new SignInRequest(user.getEmail(), user.getPassword())
+                new SignInRequest(user.email(), user.password())
         );
     }
 }

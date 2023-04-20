@@ -4,6 +4,7 @@ package com.conduit.domain.content;
 import com.conduit.domain.user.User;
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.Accessors;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -13,12 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
 @EntityListeners(AuditingEntityListener.class)
+@Accessors(chain = true, fluent = true)
+@Data
 public class Article {
     @Id
     @GeneratedValue
@@ -37,11 +35,9 @@ public class Article {
     private String body;
 
     @CreatedDate
-    @Temporal(value = TemporalType.TIMESTAMP)
     private Instant createdAt;
 
     @LastModifiedDate
-    @Temporal(value = TemporalType.TIMESTAMP)
     private Instant updatedAt;
 
     @ManyToOne

@@ -25,27 +25,23 @@ public class AppRunner implements CommandLineRunner {
     }
 
     private User generateUser() {
-        var user = User
-                .builder()
+        var user = new User()
                 .email("lewis@gmail.com")
                 .username("lewiclancy")
                 .bio("long live the king")
                 .image("https://localhost:3000")
-                .password(passwordEncoder.encode("9326"))
-                .build();
+                .password(passwordEncoder.encode("9326"));
 
         return userRepository.save(user);
     }
 
     private Article generateArticle(User author) {
-        var article = Article
-                .builder()
+        var article = new Article()
                 .author(author)
                 .slug("new-article")
                 .title("New Article")
                 .description("New generated article")
-                .body("This is the generated article")
-                .build();
+                .body("This is the generated article");
 
         return articleRepository.save(article);
     }

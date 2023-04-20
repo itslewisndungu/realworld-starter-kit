@@ -33,8 +33,7 @@ public class ArticleController {
         return this.articleService.createNewArticle(article, author);
     }
 
-    @PutMapping("/{slug}")
-    public Article updateArticle(
+    @PutMapping("/{slug}") public Article updateArticle(
             @Valid @RequestBody ArticleDto article,
             @PathVariable("slug") String slug
     ) {
