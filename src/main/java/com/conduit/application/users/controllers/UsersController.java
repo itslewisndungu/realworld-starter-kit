@@ -23,7 +23,7 @@ public class UsersController {
 
     @PostMapping("/login")
     public UserResponse getToken(@Valid @RequestBody SignInRequest req) {
-        var user =  authService.signIn(req);
+        var user = authService.signIn(req);
         return new UserResponse(user);
     }
 

@@ -4,6 +4,7 @@ import com.conduit.application.users.requests.SignInRequest;
 import com.conduit.application.users.requests.SignUpRequest;
 import com.conduit.domain.user.User;
 import com.conduit.domain.user.UserRepository;
+import com.conduit.domain.user.UserVO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -19,7 +20,7 @@ public class AuthService {
     private final PasswordEncoder passwordEncoder;
     SecurityContext securityContext = SecurityContextHolder.getContext();
 
-    public User signIn(SignInRequest request) {
+    public UserVO signIn(SignInRequest request) {
         return userRepository
                 .findByEmail(request.getEmail())
                 .filter(user -> passwordEncoder.matches(request.getPassword(), user.getPassword()))
@@ -27,7 +28,7 @@ public class AuthService {
                         user -> {
                             String token = jwtService.generateToken(user);
                             user.setToken(token);
-                            return user;
+                            return new UserVO(user);
                         }
                 )
                 .orElseThrow(() -> new UsernameNotFoundException("Invalid username or password"));
