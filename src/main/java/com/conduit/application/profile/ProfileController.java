@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/profiles")
+@RequestMapping("/api/profiles")
 @RequiredArgsConstructor
 public class ProfileController {
     private final ProfileService profileService;

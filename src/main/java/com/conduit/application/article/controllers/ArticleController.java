@@ -11,7 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/articles")
+@RequestMapping("/api/articles")
 @RequiredArgsConstructor
 public class ArticleController {
     private final ArticleService articleService;
