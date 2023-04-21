@@ -20,22 +20,35 @@ public class AppRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("running the command line runner");
-        var user = this.generateUser();
-        this.generateArticle(user);
+        this.generateData();
     }
 
-    private User generateUser() {
-        var user = new User()
+    private void generateData() {
+        var user1 = new User()
                 .email("lewis@gmail.com")
                 .username("lewiclancy")
                 .bio("long live the king")
                 .image("https://localhost:3000")
                 .password(passwordEncoder.encode("9326"));
 
-        return userRepository.save(user);
+        var user2 = new User()
+                .email("lewisn@gmail.com")
+                .username("lewii")
+                .bio("long live the king")
+                .image("https://localhost:3000")
+                .password(passwordEncoder.encode("9326"));
+
+         userRepository.save(user1);
+         userRepository.save(user2);
+
+        user1.follow(user2);
+        userRepository.save(user1);
+//        userRepository.save(user2);
+
+        this.generateArticle(user1);
     }
 
-    private Article generateArticle(User author) {
+    private void generateArticle(User author) {
         var article = new Article()
                 .author(author)
                 .slug("new-article")
@@ -43,6 +56,6 @@ public class AppRunner implements CommandLineRunner {
                 .description("New generated article")
                 .body("This is the generated article");
 
-        return articleRepository.save(article);
+        articleRepository.save(article);
     }
 }

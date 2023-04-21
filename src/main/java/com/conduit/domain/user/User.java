@@ -3,6 +3,8 @@ package com.conduit.domain.user;
 import com.conduit.domain.content.Article;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.experimental.Accessors;
 
 import java.util.HashSet;
@@ -11,7 +13,8 @@ import java.util.Set;
 
 @Entity
 @Table(name = "users")
-@Data
+@Getter
+@Setter
 @Accessors(fluent = true, chain = true)
 public class User {
     @Id
@@ -39,12 +42,32 @@ public class User {
 
     @ManyToMany
     @JoinTable(
-            name = "user_follower",
+            name = "user_following",
             joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "follower_id")
+            inverseJoinColumns = @JoinColumn(name = "following_user_id")
     )
+    private final Set<User> following = new HashSet<>();
+
+    @ManyToMany(mappedBy = "following")
     private Set<User> followers = new HashSet<>();
 
-    @ManyToMany(mappedBy = "followers")
-    private final Set<User> following = new HashSet<>();
+    public boolean isFollowing(User user){
+        System.out.println(this.following());
+        return this.following().contains(user);
+    }
+
+    public void follow(User user) {
+        if (isFollowing(user)) return;
+
+        this.following().add(user);
+        user.followers.add(this);
+    }
+
+
+    public void unfollow(User user) {
+        if (!isFollowing(user)) return;
+
+        this.following.remove(user);
+        user.followers.remove(this);
+    }
 }

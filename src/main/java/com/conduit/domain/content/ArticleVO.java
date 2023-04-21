@@ -1,8 +1,7 @@
 package com.conduit.domain.content;
 
-import com.conduit.application.users.dtos.UserDto;
-import com.conduit.domain.content.Article;
-import com.conduit.domain.user.User;
+
+import com.conduit.domain.user.UserVO;
 
 import java.time.LocalDateTime;
 
@@ -13,7 +12,7 @@ public record ArticleVO(
         String body,
         LocalDateTime createdAt,
         LocalDateTime updatedAt,
-        UserDto author
+        UserVO author
 ) {
     public ArticleVO(Article article) {
         this(
@@ -23,7 +22,7 @@ public record ArticleVO(
                 article.body(),
                 article.createdAt(),
                 article.updatedAt(),
-                new UserDto(article.author())
+                new UserVO(article.author())
         );
     }
 }
