@@ -45,7 +45,7 @@ public class AppRunner implements CommandLineRunner {
         userRepository.save(user1);
 //        userRepository.save(user2);
 
-        this.generateArticle(user1);
+        this.generateArticle(user2);
     }
 
     private void generateArticle(User author) {

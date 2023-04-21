@@ -17,14 +17,14 @@ public class ArticleController {
     private final ArticleService articleService;
 
     @GetMapping
-    public MultipleArticlesResponse getAllArticles() {
-        var articles = this.articleService.retrieveAllArticles();
+    public MultipleArticlesResponse getAllArticles(User user) {
+        var articles = this.articleService.retrieveAllArticles(user);
         return new MultipleArticlesResponse(articles);
     }
 
     @GetMapping("/{slug}")
-    public ArticleResponse getArticle(@PathVariable("slug") String slug) {
-        var article = this.articleService.getArticle(slug);
+    public ArticleResponse getArticle(@PathVariable("slug") String slug, User user) {
+        var article = this.articleService.getArticle(slug, user);
         return new ArticleResponse(article);
     }
 
@@ -38,9 +38,10 @@ public class ArticleController {
     @PutMapping("/{slug}")
     public ArticleResponse updateArticle(
             @RequestBody UpdateArticleRequest request,
-            @PathVariable("slug") String slug
+            @PathVariable("slug") String slug,
+            User user
     ) {
-        var updatedArticle = this.articleService.updateArticle(request, slug);
+        var updatedArticle = this.articleService.updateArticle(request, slug, user);
         return new ArticleResponse(updatedArticle);
     }
 

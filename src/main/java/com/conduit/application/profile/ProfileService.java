@@ -16,7 +16,7 @@ public class ProfileService {
     public ProfileVO getProfile(String username, User loggedInUser) {
         return userRepository
                 .findByUsername(username)
-                .map(u -> loggedInUser == null ? new ProfileVO(u) : new ProfileVO(u, loggedInUser))
+                .map(u -> new ProfileVO(u, loggedInUser))
                 .orElseThrow(
                         () -> new NoSuchElementException("User with the username %s not found".formatted(username))
                 );

@@ -17,18 +17,18 @@ import java.util.NoSuchElementException;
 public class ArticleService {
     private final ArticleRepository repository;
 
-    public List<ArticleVO> retrieveAllArticles() {
+    public List<ArticleVO> retrieveAllArticles(User user) {
         return this.repository
                 .findAll()
                 .stream()
-                .map(ArticleVO::new)
+                .map(a -> new ArticleVO(a, user))
                 .toList();
     }
 
-    public ArticleVO getArticle(String slug) {
+    public ArticleVO getArticle(String slug, User user) {
         return this.repository
                 .getArticleBySlug(slug)
-                .map(ArticleVO::new)
+                .map(a -> new ArticleVO(a, user))
                 .orElseThrow(
                         () -> new NoSuchElementException(String.format("Article with the slug %s not found", slug))
                 );
@@ -43,10 +43,10 @@ public class ArticleService {
                 .body(request.body());
 
         var savedArticle = this.repository.save(newArticle);
-        return new ArticleVO(savedArticle);
+        return new ArticleVO(savedArticle, null);
     }
 
-    public ArticleVO updateArticle(UpdateArticleRequest request, String slug) {
+    public ArticleVO updateArticle(UpdateArticleRequest request, String slug, User user) {
         Article oldArticle = this.repository
                 .getArticleBySlug(slug)
                 .orElseThrow(
@@ -58,7 +58,7 @@ public class ArticleService {
         oldArticle.description(request.description());
 
         var updatedArticle =  this.repository.save(oldArticle);
-        return new ArticleVO(updatedArticle);
+        return new ArticleVO(updatedArticle, null);
     }
 
     public void deleteArticle(String slug) {
