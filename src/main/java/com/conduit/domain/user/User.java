@@ -4,7 +4,9 @@ import com.conduit.domain.content.Article;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -37,4 +39,14 @@ public class User {
     @OneToMany(mappedBy = "author")
     private List<Article> articles;
 
+    @ManyToMany
+    @JoinTable(
+            name = "user_follower",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "follower_id")
+    )
+    private Set<User> followers = new HashSet<>();
+
+    @ManyToMany(mappedBy = "followers")
+    private final Set<User> following = new HashSet<>();
 }

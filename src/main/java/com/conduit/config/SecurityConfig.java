@@ -24,6 +24,7 @@ public class SecurityConfig {
                 .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt)
                 .authorizeHttpRequests()
                 .requestMatchers(HttpMethod.POST, "/users", "/users/login").permitAll()
+                .requestMatchers(HttpMethod.GET, "/profiles/*").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
