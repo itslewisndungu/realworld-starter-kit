@@ -3,13 +3,13 @@ package com.conduit.domain.content;
 
 import com.conduit.domain.user.User;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
 import lombok.experimental.Accessors;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,10 +35,10 @@ public class Article {
     private String body;
 
     @CreatedDate
-    private Instant createdAt;
+    private LocalDateTime createdAt;
 
     @LastModifiedDate
-    private Instant updatedAt;
+    private LocalDateTime updatedAt;
 
     @ManyToOne
     @JoinColumn(name = "author_id")

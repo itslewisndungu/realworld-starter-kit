@@ -1,6 +1,8 @@
 package com.conduit.application.article.services;
 
-import com.conduit.application.article.dtos.ArticleDto;
+import com.conduit.domain.content.ArticleVO;
+import com.conduit.application.article.requests.CreateArticleRequest;
+import com.conduit.application.article.requests.UpdateArticleRequest;
 import com.conduit.domain.content.Article;
 import com.conduit.domain.content.ArticleRepository;
 import com.conduit.domain.user.User;
@@ -15,37 +17,48 @@ import java.util.NoSuchElementException;
 public class ArticleService {
     private final ArticleRepository repository;
 
-    public List<Article> retrieveAllArticles() {
-        return this.repository.findAll();
+    public List<ArticleVO> retrieveAllArticles() {
+        return this.repository
+                .findAll()
+                .stream()
+                .map(ArticleVO::new)
+                .toList();
     }
 
-    public Article getArticle(String slug) {
-        return this.repository.getArticleBySlug(slug).orElseThrow(
-                () -> new NoSuchElementException(String.format("Article with the slug %s not found", slug))
-        );
+    public ArticleVO getArticle(String slug) {
+        return this.repository
+                .getArticleBySlug(slug)
+                .map(ArticleVO::new)
+                .orElseThrow(
+                        () -> new NoSuchElementException(String.format("Article with the slug %s not found", slug))
+                );
     }
 
-    public Article createNewArticle(ArticleDto article, User author) {
-        Article newArticle = new Article()
+    public ArticleVO createNewArticle(CreateArticleRequest request, User author) {
+        var newArticle = new Article()
                 .author(author)
-                .slug(article.getSlug())
-                .title(article.getTitle())
-                .description(article.getDescription())
-                .body(article.getBody());
+                .slug(request.slug())
+                .title(request.title())
+                .description(request.description())
+                .body(request.body());
 
-        return this.repository.save(newArticle);
+        var savedArticle = this.repository.save(newArticle);
+        return new ArticleVO(savedArticle);
     }
 
-    public Article updateArticle(ArticleDto article, String slug) {
-        Article oldArticle = this.repository.getArticleBySlug(slug).orElseThrow(
-                () -> new NoSuchElementException(String.format("Article with the slug %s not found", slug))
-        );
+    public ArticleVO updateArticle(UpdateArticleRequest request, String slug) {
+        Article oldArticle = this.repository
+                .getArticleBySlug(slug)
+                .orElseThrow(
+                        () -> new NoSuchElementException(String.format("Article with the slug %s not found", slug))
+                );
 
-        oldArticle.title(article.getTitle());
-        oldArticle.body(article.getBody());
-        oldArticle.description(article.getDescription());
+        oldArticle.title(request.title());
+        oldArticle.body(request.body());
+        oldArticle.description(request.description());
 
-        return this.repository.save(oldArticle);
+        var updatedArticle =  this.repository.save(oldArticle);
+        return new ArticleVO(updatedArticle);
     }
 
     public void deleteArticle(String slug) {
