@@ -1,4 +1,4 @@
-package com.conduit.application.article.services;
+package com.conduit.application.tags;
 
 import com.conduit.domain.content.Tag;
 import com.conduit.domain.content.TagRepository;

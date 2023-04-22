@@ -1,11 +1,11 @@
-package com.conduit.application.article.controllers;
+package com.conduit.application.articles.controllers;
 
-import com.conduit.application.article.requests.ArticleFacets;
-import com.conduit.application.article.requests.CreateArticleRequest;
-import com.conduit.application.article.requests.UpdateArticleRequest;
-import com.conduit.application.article.response.ArticleResponse;
-import com.conduit.application.article.response.MultipleArticlesResponse;
-import com.conduit.application.article.services.ArticleService;
+import com.conduit.application.articles.requests.ArticleFacets;
+import com.conduit.application.articles.requests.CreateArticleRequest;
+import com.conduit.application.articles.requests.UpdateArticleRequest;
+import com.conduit.application.articles.response.ArticleResponse;
+import com.conduit.application.articles.response.MultipleArticlesResponse;
+import com.conduit.application.articles.services.ArticleService;
 import com.conduit.domain.user.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

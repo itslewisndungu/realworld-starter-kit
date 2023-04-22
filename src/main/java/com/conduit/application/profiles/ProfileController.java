@@ -1,4 +1,4 @@
-package com.conduit.application.profile;
+package com.conduit.application.profiles;
 
 import com.conduit.domain.user.User;
 import lombok.RequiredArgsConstructor;

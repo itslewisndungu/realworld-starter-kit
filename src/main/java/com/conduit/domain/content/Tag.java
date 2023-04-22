@@ -20,6 +20,6 @@ public class Tag {
     @Column(unique = true, length = 20)
     private String name;
 
-    @ManyToMany(mappedBy = "tags")
+    @ManyToMany(mappedBy = "tagsList")
     Set<Article> articles = new HashSet<>();
 }

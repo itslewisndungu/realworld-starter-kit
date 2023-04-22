@@ -1,8 +1,9 @@
-package com.conduit.application.article.services;
+package com.conduit.application.articles.services;
 
-import com.conduit.application.article.requests.ArticleFacets;
-import com.conduit.application.article.requests.CreateArticleRequest;
-import com.conduit.application.article.requests.UpdateArticleRequest;
+import com.conduit.application.articles.requests.ArticleFacets;
+import com.conduit.application.articles.requests.CreateArticleRequest;
+import com.conduit.application.articles.requests.UpdateArticleRequest;
+import com.conduit.application.tags.TagService;
 import com.conduit.domain.content.Article;
 import com.conduit.domain.content.ArticleRepository;
 import com.conduit.domain.content.ArticleVO;

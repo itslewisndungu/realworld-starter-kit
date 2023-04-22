@@ -1,4 +1,4 @@
-package com.conduit.application.article.response;
+package com.conduit.application.articles.response;
 
 import com.conduit.domain.content.ArticleVO;
 

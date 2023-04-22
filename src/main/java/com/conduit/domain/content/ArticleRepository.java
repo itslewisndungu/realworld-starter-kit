@@ -20,7 +20,7 @@ public interface ArticleRepository extends JpaRepository<Article, Integer> {
     @Query("""
             select a from Article a
             where (:author IS NULL OR a.author.username = :author)
-            and (:tag is null or :tag in (select t.name from a.tags t))
+            and (:tag is null or :tag in (select t.name from a.tagsList t))
             """)
     Page<Article> findAllByFacets(
             @Param("author") String author,

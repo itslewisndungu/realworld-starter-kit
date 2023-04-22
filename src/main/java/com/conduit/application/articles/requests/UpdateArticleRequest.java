@@ -1,4 +1,4 @@
-package com.conduit.application.article.requests;
+package com.conduit.application.articles.requests;
 
 import com.fasterxml.jackson.annotation.JsonRootName;
 
