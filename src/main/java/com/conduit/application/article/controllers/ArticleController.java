@@ -1,5 +1,6 @@
 package com.conduit.application.article.controllers;
 
+import com.conduit.application.article.requests.ArticleFacets;
 import com.conduit.application.article.requests.CreateArticleRequest;
 import com.conduit.application.article.requests.UpdateArticleRequest;
 import com.conduit.application.article.response.ArticleResponse;
@@ -22,7 +23,8 @@ public class ArticleController {
             @RequestParam(value = "limit", required = false, defaultValue = "20") int limit,
             @RequestParam(value = "offset", required = false, defaultValue = "0") int offset
     ) {
-        var articles = this.articleService.retrieveAllArticles(user, offset, limit);
+        var facets = new ArticleFacets(offset, limit);
+        var articles = this.articleService.retrieveAllArticles(user, facets);
         return new MultipleArticlesResponse(articles);
     }
 

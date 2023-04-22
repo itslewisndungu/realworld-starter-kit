@@ -1,10 +1,11 @@
 package com.conduit.application.article.services;
 
-import com.conduit.domain.content.ArticleVO;
+import com.conduit.application.article.requests.ArticleFacets;
 import com.conduit.application.article.requests.CreateArticleRequest;
 import com.conduit.application.article.requests.UpdateArticleRequest;
 import com.conduit.domain.content.Article;
 import com.conduit.domain.content.ArticleRepository;
+import com.conduit.domain.content.ArticleVO;
 import com.conduit.domain.user.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
@@ -18,8 +19,8 @@ import java.util.NoSuchElementException;
 public class ArticleService {
     private final ArticleRepository repository;
 
-    public List<ArticleVO> retrieveAllArticles(User user, int offset, int limit) {
-        var pageable = PageRequest.of(offset, limit);
+    public List<ArticleVO> retrieveAllArticles(User user, ArticleFacets facets) {
+        var pageable = PageRequest.of(facets.offset(), facets.limit());
 
         return this.repository
                 .findAll(pageable)
@@ -60,7 +61,7 @@ public class ArticleService {
         oldArticle.body(request.body());
         oldArticle.description(request.description());
 
-        var updatedArticle =  this.repository.save(oldArticle);
+        var updatedArticle = this.repository.save(oldArticle);
         return new ArticleVO(updatedArticle, null);
     }
 
