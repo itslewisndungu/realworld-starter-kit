@@ -65,7 +65,7 @@ public class AppRunner implements CommandLineRunner {
                 .title("New World")
                 .description("New world generated article")
                 .body("This is the new generated article")
-                .tags(Set.of(tag1));
+                .tagsList(Set.of(tag1));
 
         var article2 = new Article()
                 .author(author)
@@ -73,7 +73,7 @@ public class AppRunner implements CommandLineRunner {
                 .title("New Article")
                 .description("New generated article")
                 .body("This is the generated article")
-                .tags(Set.of(tag2));
+                .tagsList(Set.of(tag2));
 
 
         articleRepository.save(article1);

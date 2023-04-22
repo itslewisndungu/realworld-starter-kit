@@ -6,18 +6,23 @@ import com.conduit.application.article.requests.UpdateArticleRequest;
 import com.conduit.domain.content.Article;
 import com.conduit.domain.content.ArticleRepository;
 import com.conduit.domain.content.ArticleVO;
+import com.conduit.domain.content.Tag;
 import com.conduit.domain.user.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 public class ArticleService {
     private final ArticleRepository repository;
+    private final TagService tagService;
 
     public List<ArticleVO> retrieveAllArticles(User user, ArticleFacets facets) {
         var pageable = PageRequest.of(facets.offset(), facets.limit());
@@ -41,12 +46,22 @@ public class ArticleService {
     }
 
     public ArticleVO createNewArticle(CreateArticleRequest request, User author) {
+        Set<Tag> tags = new HashSet<>();
+
+        if (request.tagsList().isPresent()) {
+            tags = request.tagsList().get()
+                    .stream()
+                    .map(tagService::findOrCreateTagByName)
+                    .collect(Collectors.toSet());
+        }
+
         var newArticle = new Article()
                 .author(author)
                 .slug(request.slug())
                 .title(request.title())
                 .description(request.description())
-                .body(request.body());
+                .body(request.body())
+                .tagsList(tags);
 
         var savedArticle = this.repository.save(newArticle);
         return new ArticleVO(savedArticle, null);

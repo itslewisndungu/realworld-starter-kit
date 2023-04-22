@@ -27,7 +27,7 @@ public record ArticleVO(
                 article.body(),
                 article.createdAt(),
                 article.updatedAt(),
-                article.tags().stream().map(Tag::name).toList(),
+                article.tagsList().stream().map(Tag::name).toList(),
                 new ProfileVO(article.author(), user),
                 article.favourites().size(),
                 article.favourites().contains(user)
