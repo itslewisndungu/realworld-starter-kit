@@ -7,6 +7,7 @@ import com.conduit.domain.content.Article;
 import com.conduit.domain.content.ArticleRepository;
 import com.conduit.domain.user.User;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,9 +18,11 @@ import java.util.NoSuchElementException;
 public class ArticleService {
     private final ArticleRepository repository;
 
-    public List<ArticleVO> retrieveAllArticles(User user) {
+    public List<ArticleVO> retrieveAllArticles(User user, int offset, int limit) {
+        var pageable = PageRequest.of(offset, limit);
+
         return this.repository
-                .findAll()
+                .findAll(pageable)
                 .stream()
                 .map(a -> new ArticleVO(a, user))
                 .toList();

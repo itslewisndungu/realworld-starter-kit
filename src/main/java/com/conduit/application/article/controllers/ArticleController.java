@@ -17,8 +17,12 @@ public class ArticleController {
     private final ArticleService articleService;
 
     @GetMapping
-    public MultipleArticlesResponse getAllArticles(User user) {
-        var articles = this.articleService.retrieveAllArticles(user);
+    public MultipleArticlesResponse getAllArticles(
+            User user,
+            @RequestParam(value = "limit", required = false, defaultValue = "20") int limit,
+            @RequestParam(value = "offset", required = false, defaultValue = "0") int offset
+    ) {
+        var articles = this.articleService.retrieveAllArticles(user, offset, limit);
         return new MultipleArticlesResponse(articles);
     }
 

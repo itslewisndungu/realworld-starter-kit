@@ -43,19 +43,27 @@ public class AppRunner implements CommandLineRunner {
 
         user1.follow(user2);
         userRepository.save(user1);
-//        userRepository.save(user2);
 
         this.generateArticle(user2);
     }
 
     private void generateArticle(User author) {
-        var article = new Article()
+        var article1 = new Article()
+                .author(author)
+                .slug("hello-world")
+                .title("New World")
+                .description("New world generated article")
+                .body("This is the new generated article");
+
+        var article2 = new Article()
                 .author(author)
                 .slug("new-article")
                 .title("New Article")
                 .description("New generated article")
                 .body("This is the generated article");
 
-        articleRepository.save(article);
+
+        articleRepository.save(article1);
+        articleRepository.save(article2);
     }
 }
