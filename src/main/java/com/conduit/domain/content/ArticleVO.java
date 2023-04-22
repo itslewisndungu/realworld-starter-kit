@@ -5,6 +5,7 @@ import com.conduit.domain.user.ProfileVO;
 import com.conduit.domain.user.User;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public record ArticleVO(
         String slug,
@@ -13,7 +14,10 @@ public record ArticleVO(
         String body,
         LocalDateTime createdAt,
         LocalDateTime updatedAt,
-        ProfileVO author
+        List<String> tagsList,
+        ProfileVO author,
+        int favouritesCount,
+        boolean favourited
 ) {
     public ArticleVO(Article article, User user) {
         this(
@@ -23,28 +27,10 @@ public record ArticleVO(
                 article.body(),
                 article.createdAt(),
                 article.updatedAt(),
-                new ProfileVO(article.author(), user)
+                article.tags().stream().map(Tag::name).toList(),
+                new ProfileVO(article.author(), user),
+                article.favourites().size(),
+                article.favourites().contains(user)
         );
     }
 }
-/*
-{
-  "article": {
-    "slug": "how-to-train-your-dragon",
-    "title": "how to train your dragon",
-    "description": "ever wonder how?",
-    "body": "it takes a jacobian",
-    "taglist": ["dragons", "training"],
-    "createdat": "2016-02-18t03:22:56.637z",
-    "updatedat": "2016-02-18t03:48:35.824z",
-    "favorited": false,
-    "favoritescount": 0,
-    "author": {
-      "username": "jake",
-      "bio": "I work at statefarm",
-      "image": "https://i.stack.imgur.com/xHWG8.jpg",
-      "following": false
-    }
-  }
-}
-*/

@@ -23,7 +23,9 @@ public class ArticleService {
         var pageable = PageRequest.of(facets.offset(), facets.limit());
 
         return this.repository
-                .findAllByFacets(facets.author(), pageable)
+                .findAllByFacets(
+                        facets.author(), facets.tag(), pageable
+                )
                 .stream()
                 .map(a -> new ArticleVO(a, user))
                 .toList();

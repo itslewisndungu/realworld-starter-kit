@@ -21,10 +21,11 @@ public class ArticleController {
     public MultipleArticlesResponse getAllArticles(
             User user,
             @RequestParam(value = "author", required = false) String author,
+            @RequestParam(value = "tag", required = false) String tag,
             @RequestParam(value = "limit", required = false, defaultValue = "20") int limit,
             @RequestParam(value = "offset", required = false, defaultValue = "0") int offset
     ) {
-        var facets = new ArticleFacets(author, offset, limit);
+        var facets = new ArticleFacets(author, tag, offset, limit);
         var articles = this.articleService.retrieveAllArticles(user, facets);
         return new MultipleArticlesResponse(articles);
     }
