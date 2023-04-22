@@ -57,6 +57,18 @@ public class Article {
     )
     private List<User> favourites = new ArrayList<>();
 
+    public Article favoriteOrUnfavoriteArticle(User user) {
+        var favorites = this.favourites();
+
+        if (favorites.contains(user)) {
+            favorites.remove(user);
+        } else {
+            favorites.add(user);
+        }
+
+        return this;
+    }
+
     @ManyToMany
     @JoinTable(
             name = "article_tag",

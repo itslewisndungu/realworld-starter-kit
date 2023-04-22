@@ -89,4 +89,16 @@ public class ArticleService {
         );
         this.repository.delete(article);
     }
+
+    public ArticleVO favoriteOrUnfavoriteArticle(String slug, User me) {
+        var article = repository.getArticleBySlug(slug)
+                .orElseThrow(
+                        () -> new NoSuchElementException(String.format("Article with the slug %s not found", slug))
+                );
+
+        article.favoriteOrUnfavoriteArticle(me);
+        article = this.repository.save(article);
+
+        return new ArticleVO(article, me);
+    }
 }

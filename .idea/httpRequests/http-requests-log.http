@@ -1,3 +1,465 @@
+DELETE http://localhost:8080/api/articles/new-article/favorite
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTc3MjgwLCJpYXQiOjE2ODIxNzM2ODB9.mJGa-NjM7PTCGFz48V8A1PbGkPAt_kQ36R04s5WrY9zF-yxhTjeLMciMAtCuDrVGwWvutZoFaHnv_fUx9eXqvu5W1CFfAeVMfFFkmTbnk2Jb0kJpuAdFucfU_sEgxiVw_U9gUSfFPp9IKrLxiVPHFdRvpg6WyFj5AtLGEDDWcPWWeOBRJNNwqfN_nVsVwXfuduizAYqrqeajkiTrEabKvEHHEyaCMyXXOHaSoyYFZ640YinbKRqGgwR3B66YGbgueeA7Ff_yuarAu86PqsndqAt2fF-ujQxWxTKgLgCHALEKgEMetn2IdsNAstm-UjJqYxQ_n7jiEeidPymhYDzjhQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-22T173101.200.json
+
+###
+
+POST http://localhost:8080/api/articles/new-article/favorite
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTc3MjgwLCJpYXQiOjE2ODIxNzM2ODB9.mJGa-NjM7PTCGFz48V8A1PbGkPAt_kQ36R04s5WrY9zF-yxhTjeLMciMAtCuDrVGwWvutZoFaHnv_fUx9eXqvu5W1CFfAeVMfFFkmTbnk2Jb0kJpuAdFucfU_sEgxiVw_U9gUSfFPp9IKrLxiVPHFdRvpg6WyFj5AtLGEDDWcPWWeOBRJNNwqfN_nVsVwXfuduizAYqrqeajkiTrEabKvEHHEyaCMyXXOHaSoyYFZ640YinbKRqGgwR3B66YGbgueeA7Ff_yuarAu86PqsndqAt2fF-ujQxWxTKgLgCHALEKgEMetn2IdsNAstm-UjJqYxQ_n7jiEeidPymhYDzjhQ
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-22T173036.200.json
+
+###
+
+POST http://localhost:8080/api/articles/new-article/favorite
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTc3MjgwLCJpYXQiOjE2ODIxNzM2ODB9.mJGa-NjM7PTCGFz48V8A1PbGkPAt_kQ36R04s5WrY9zF-yxhTjeLMciMAtCuDrVGwWvutZoFaHnv_fUx9eXqvu5W1CFfAeVMfFFkmTbnk2Jb0kJpuAdFucfU_sEgxiVw_U9gUSfFPp9IKrLxiVPHFdRvpg6WyFj5AtLGEDDWcPWWeOBRJNNwqfN_nVsVwXfuduizAYqrqeajkiTrEabKvEHHEyaCMyXXOHaSoyYFZ640YinbKRqGgwR3B66YGbgueeA7Ff_yuarAu86PqsndqAt2fF-ujQxWxTKgLgCHALEKgEMetn2IdsNAstm-UjJqYxQ_n7jiEeidPymhYDzjhQ
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-22T172926.405.json
+
+###
+
+GET http://localhost:8080/api/articles
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTc3MjgwLCJpYXQiOjE2ODIxNzM2ODB9.mJGa-NjM7PTCGFz48V8A1PbGkPAt_kQ36R04s5WrY9zF-yxhTjeLMciMAtCuDrVGwWvutZoFaHnv_fUx9eXqvu5W1CFfAeVMfFFkmTbnk2Jb0kJpuAdFucfU_sEgxiVw_U9gUSfFPp9IKrLxiVPHFdRvpg6WyFj5AtLGEDDWcPWWeOBRJNNwqfN_nVsVwXfuduizAYqrqeajkiTrEabKvEHHEyaCMyXXOHaSoyYFZ640YinbKRqGgwR3B66YGbgueeA7Ff_yuarAu86PqsndqAt2fF-ujQxWxTKgLgCHALEKgEMetn2IdsNAstm-UjJqYxQ_n7jiEeidPymhYDzjhQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-22T172843.200.json
+
+###
+
+POST http://localhost:8080/api/users/login
+Content-Type: application/json
+Content-Length: 74
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "user": {
+    "email": "lewis@gmail.com",
+    "password": "9326"
+  }
+}
+
+<> 2023-04-22T172800.200.json
+
+###
+
+GET http://localhost:8080/api/articles?author=lewii
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTcxODg5LCJpYXQiOjE2ODIxNjgyODl9.GVwiL3LdXhwXmX-FmaYi79p7GVelCMuP1OReIuutvQLN-bKGM_AaSF4H2WMOsNQ7a3g-vLonAAtKLJ2YiNgY_hZ-aHpmIhc4BA09I1w6lYU0hK-jGQUGNHtZmVDuUrWc0-gSMDLwhlG1B_ZeBRsGdtqL6gLs4TZDpIZxQ3rTGfZj5QkcWoQaUfEKd31IdInjoAKGTKBDwL7YV9syvRV0spj75G1r71Hnx79dEbeQrd-wHjrnSluhE2cWAPhMlckpt_-zX3BU5PHFJJFBJRXDwh-V4zAmv0gAcXDdoQ28XKrI-e0twaODtWMSJnyP3-u8nPDGV-g5HIf-ipZ8ncSe4A
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/api/tags
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-22T170225.200.json
+
+###
+
+GET http://localhost:8080/api/tags
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-22T170039.200.json
+
+###
+
+POST http://localhost:8080/api/articles
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTczODI0LCJpYXQiOjE2ODIxNzAyMjR9.GAQC5kiR2k_9QZnNOjPJJILT09WPUNjUgWHY6PmpK04mdRryfC8DvyZbwNCBSZBgBNsBGO4IvfNHN_DKCSaQLd6ubPXzWEqq6vtOvx607ZnTcm-C5x_jnJmydrXdXFG79hMctTWyuYRu87JVtrMUJH7f6rDIGjSjj_x0riHMUwaf3DUxri-Z95RzsA5dxYSKKa5wWpAtT5qoRQTcPlBT1bsRBEoNpRvz9aZt8y43YrizjYnlzb0AdngYQwCiDOeqXxthf--_3HtkS4LDcKRw5_klyepZPuC815g5tPngxW1irIkXxUNkOXcWQN6VFKXfIC374RpRLqD2APrMWberTg
+Content-Type: application/json
+Content-Length: 224
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "article": {
+    "title": "Hello mr world",
+    "slug": "hello-another-world-2",
+    "body": "This is the new world",
+    "description": "describing this new article",
+    "tagsList": ["react", "angular", "nodejs"]
+  }
+}
+
+<> 2023-04-22T164739.201.json
+
+###
+
+POST http://localhost:8080/api/articles
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTczODI0LCJpYXQiOjE2ODIxNzAyMjR9.GAQC5kiR2k_9QZnNOjPJJILT09WPUNjUgWHY6PmpK04mdRryfC8DvyZbwNCBSZBgBNsBGO4IvfNHN_DKCSaQLd6ubPXzWEqq6vtOvx607ZnTcm-C5x_jnJmydrXdXFG79hMctTWyuYRu87JVtrMUJH7f6rDIGjSjj_x0riHMUwaf3DUxri-Z95RzsA5dxYSKKa5wWpAtT5qoRQTcPlBT1bsRBEoNpRvz9aZt8y43YrizjYnlzb0AdngYQwCiDOeqXxthf--_3HtkS4LDcKRw5_klyepZPuC815g5tPngxW1irIkXxUNkOXcWQN6VFKXfIC374RpRLqD2APrMWberTg
+Content-Type: application/json
+Content-Length: 212
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "article": {
+    "title": "Hello mr world",
+    "slug": "hello-another-world",
+    "body": "This is the new world",
+    "description": "describing this new article",
+    "tagsList": ["react", "angular"]
+  }
+}
+
+<> 2023-04-22T164725.201.json
+
+###
+
+POST http://localhost:8080/api/articles
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTczODI0LCJpYXQiOjE2ODIxNzAyMjR9.GAQC5kiR2k_9QZnNOjPJJILT09WPUNjUgWHY6PmpK04mdRryfC8DvyZbwNCBSZBgBNsBGO4IvfNHN_DKCSaQLd6ubPXzWEqq6vtOvx607ZnTcm-C5x_jnJmydrXdXFG79hMctTWyuYRu87JVtrMUJH7f6rDIGjSjj_x0riHMUwaf3DUxri-Z95RzsA5dxYSKKa5wWpAtT5qoRQTcPlBT1bsRBEoNpRvz9aZt8y43YrizjYnlzb0AdngYQwCiDOeqXxthf--_3HtkS4LDcKRw5_klyepZPuC815g5tPngxW1irIkXxUNkOXcWQN6VFKXfIC374RpRLqD2APrMWberTg
+Content-Type: application/json
+Content-Length: 206
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "article": {
+    "title": "Hello mr world",
+    "slug": "hello-another",
+    "body": "This is the new world",
+    "description": "describing this new article",
+    "tagsList": ["react", "angular"]
+  }
+}
+
+<> 2023-04-22T164714.500.json
+
+###
+
+POST http://localhost:8080/api/articles
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTczODI0LCJpYXQiOjE2ODIxNzAyMjR9.GAQC5kiR2k_9QZnNOjPJJILT09WPUNjUgWHY6PmpK04mdRryfC8DvyZbwNCBSZBgBNsBGO4IvfNHN_DKCSaQLd6ubPXzWEqq6vtOvx607ZnTcm-C5x_jnJmydrXdXFG79hMctTWyuYRu87JVtrMUJH7f6rDIGjSjj_x0riHMUwaf3DUxri-Z95RzsA5dxYSKKa5wWpAtT5qoRQTcPlBT1bsRBEoNpRvz9aZt8y43YrizjYnlzb0AdngYQwCiDOeqXxthf--_3HtkS4LDcKRw5_klyepZPuC815g5tPngxW1irIkXxUNkOXcWQN6VFKXfIC374RpRLqD2APrMWberTg
+Content-Type: application/json
+Content-Length: 195
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "article": {
+    "title": "Hello mr world",
+    "slug": "hello-another",
+    "body": "This is the new world",
+    "description": "describing this new article",
+    "tagsList": ["react"]
+  }
+}
+
+<> 2023-04-22T164130.201.json
+
+###
+
+POST http://localhost:8080/api/articles
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTczODI0LCJpYXQiOjE2ODIxNzAyMjR9.GAQC5kiR2k_9QZnNOjPJJILT09WPUNjUgWHY6PmpK04mdRryfC8DvyZbwNCBSZBgBNsBGO4IvfNHN_DKCSaQLd6ubPXzWEqq6vtOvx607ZnTcm-C5x_jnJmydrXdXFG79hMctTWyuYRu87JVtrMUJH7f6rDIGjSjj_x0riHMUwaf3DUxri-Z95RzsA5dxYSKKa5wWpAtT5qoRQTcPlBT1bsRBEoNpRvz9aZt8y43YrizjYnlzb0AdngYQwCiDOeqXxthf--_3HtkS4LDcKRw5_klyepZPuC815g5tPngxW1irIkXxUNkOXcWQN6VFKXfIC374RpRLqD2APrMWberTg
+Content-Type: application/json
+Content-Length: 187
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "article": {
+    "title": "Hello mr world",
+    "slug": "hello",
+    "body": "This is the new world",
+    "description": "describing this new article",
+    "tagsList": ["react"]
+  }
+}
+
+<> 2023-04-22T164102.500.json
+
+###
+
+DELETE http://localhost:8080/articles/hello
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTczODI0LCJpYXQiOjE2ODIxNzAyMjR9.GAQC5kiR2k_9QZnNOjPJJILT09WPUNjUgWHY6PmpK04mdRryfC8DvyZbwNCBSZBgBNsBGO4IvfNHN_DKCSaQLd6ubPXzWEqq6vtOvx607ZnTcm-C5x_jnJmydrXdXFG79hMctTWyuYRu87JVtrMUJH7f6rDIGjSjj_x0riHMUwaf3DUxri-Z95RzsA5dxYSKKa5wWpAtT5qoRQTcPlBT1bsRBEoNpRvz9aZt8y43YrizjYnlzb0AdngYQwCiDOeqXxthf--_3HtkS4LDcKRw5_klyepZPuC815g5tPngxW1irIkXxUNkOXcWQN6VFKXfIC374RpRLqD2APrMWberTg
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-22T164027.404.json
+
+###
+
+POST http://localhost:8080/api/articles
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTczODI0LCJpYXQiOjE2ODIxNzAyMjR9.GAQC5kiR2k_9QZnNOjPJJILT09WPUNjUgWHY6PmpK04mdRryfC8DvyZbwNCBSZBgBNsBGO4IvfNHN_DKCSaQLd6ubPXzWEqq6vtOvx607ZnTcm-C5x_jnJmydrXdXFG79hMctTWyuYRu87JVtrMUJH7f6rDIGjSjj_x0riHMUwaf3DUxri-Z95RzsA5dxYSKKa5wWpAtT5qoRQTcPlBT1bsRBEoNpRvz9aZt8y43YrizjYnlzb0AdngYQwCiDOeqXxthf--_3HtkS4LDcKRw5_klyepZPuC815g5tPngxW1irIkXxUNkOXcWQN6VFKXfIC374RpRLqD2APrMWberTg
+Content-Type: application/json
+Content-Length: 160
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "article": {
+    "title": "Hello mr world",
+    "slug": "hello",
+    "body": "This is the new world",
+    "description": "describing this new article"
+  }
+}
+
+<> 2023-04-22T163959.201.json
+
+###
+
+POST http://localhost:8080/api/articles
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTczODI0LCJpYXQiOjE2ODIxNzAyMjR9.GAQC5kiR2k_9QZnNOjPJJILT09WPUNjUgWHY6PmpK04mdRryfC8DvyZbwNCBSZBgBNsBGO4IvfNHN_DKCSaQLd6ubPXzWEqq6vtOvx607ZnTcm-C5x_jnJmydrXdXFG79hMctTWyuYRu87JVtrMUJH7f6rDIGjSjj_x0riHMUwaf3DUxri-Z95RzsA5dxYSKKa5wWpAtT5qoRQTcPlBT1bsRBEoNpRvz9aZt8y43YrizjYnlzb0AdngYQwCiDOeqXxthf--_3HtkS4LDcKRw5_klyepZPuC815g5tPngxW1irIkXxUNkOXcWQN6VFKXfIC374RpRLqD2APrMWberTg
+Content-Type: application/json
+Content-Length: 160
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "article": {
+    "title": "Hello mr world",
+    "slug": "hello",
+    "body": "This is the new world",
+    "description": "describing this new article"
+  }
+}
+
+<> 2023-04-22T163139.500.json
+
+###
+
+POST http://localhost:8080/articles
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTczODI0LCJpYXQiOjE2ODIxNzAyMjR9.GAQC5kiR2k_9QZnNOjPJJILT09WPUNjUgWHY6PmpK04mdRryfC8DvyZbwNCBSZBgBNsBGO4IvfNHN_DKCSaQLd6ubPXzWEqq6vtOvx607ZnTcm-C5x_jnJmydrXdXFG79hMctTWyuYRu87JVtrMUJH7f6rDIGjSjj_x0riHMUwaf3DUxri-Z95RzsA5dxYSKKa5wWpAtT5qoRQTcPlBT1bsRBEoNpRvz9aZt8y43YrizjYnlzb0AdngYQwCiDOeqXxthf--_3HtkS4LDcKRw5_klyepZPuC815g5tPngxW1irIkXxUNkOXcWQN6VFKXfIC374RpRLqD2APrMWberTg
+Content-Type: application/json
+Content-Length: 160
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "article": {
+    "title": "Hello mr world",
+    "slug": "hello",
+    "body": "This is the new world",
+    "description": "describing this new article"
+  }
+}
+
+<> 2023-04-22T163127.404.json
+
+###
+
+POST http://localhost:8080/articles
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTczODI0LCJpYXQiOjE2ODIxNzAyMjR9.GAQC5kiR2k_9QZnNOjPJJILT09WPUNjUgWHY6PmpK04mdRryfC8DvyZbwNCBSZBgBNsBGO4IvfNHN_DKCSaQLd6ubPXzWEqq6vtOvx607ZnTcm-C5x_jnJmydrXdXFG79hMctTWyuYRu87JVtrMUJH7f6rDIGjSjj_x0riHMUwaf3DUxri-Z95RzsA5dxYSKKa5wWpAtT5qoRQTcPlBT1bsRBEoNpRvz9aZt8y43YrizjYnlzb0AdngYQwCiDOeqXxthf--_3HtkS4LDcKRw5_klyepZPuC815g5tPngxW1irIkXxUNkOXcWQN6VFKXfIC374RpRLqD2APrMWberTg
+Content-Type: application/json
+Content-Length: 160
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "article": {
+    "title": "Hello mr world",
+    "slug": "hello",
+    "body": "This is the new world",
+    "description": "describing this new article"
+  }
+}
+
+<> 2023-04-22T163100.404.json
+
+###
+
+POST http://localhost:8080/api/users/login
+Content-Type: application/json
+Content-Length: 74
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "user": {
+    "email": "lewis@gmail.com",
+    "password": "9326"
+  }
+}
+
+<> 2023-04-22T163024.200.json
+
+###
+
+GET http://localhost:8080/api/articles?author=lewii
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTcxODg5LCJpYXQiOjE2ODIxNjgyODl9.GVwiL3LdXhwXmX-FmaYi79p7GVelCMuP1OReIuutvQLN-bKGM_AaSF4H2WMOsNQ7a3g-vLonAAtKLJ2YiNgY_hZ-aHpmIhc4BA09I1w6lYU0hK-jGQUGNHtZmVDuUrWc0-gSMDLwhlG1B_ZeBRsGdtqL6gLs4TZDpIZxQ3rTGfZj5QkcWoQaUfEKd31IdInjoAKGTKBDwL7YV9syvRV0spj75G1r71Hnx79dEbeQrd-wHjrnSluhE2cWAPhMlckpt_-zX3BU5PHFJJFBJRXDwh-V4zAmv0gAcXDdoQ28XKrI-e0twaODtWMSJnyP3-u8nPDGV-g5HIf-ipZ8ncSe4A
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-22T155833.200.json
+
+###
+
+POST http://localhost:8080/api/users/login
+Content-Type: application/json
+Content-Length: 74
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "user": {
+    "email": "lewis@gmail.com",
+    "password": "9326"
+  }
+}
+
+<> 2023-04-22T155809.200.json
+
+###
+
+GET http://localhost:8080/api/articles?author=lewii
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-22T155801.200.json
+
+###
+
+GET http://localhost:8080/api/articles?author=lewii
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-22T155532.200.json
+
+###
+
+GET http://localhost:8080/api/articles?author=lewii
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTY4MDMyLCJpYXQiOjE2ODIxNjQ0MzJ9.LEhX4kw0WCPu0sjVkqt_01obwfIl9pn8v1FkwpC8OU7YuTGhFmr2SkAWMVatNgzsJvFnM-nQR1J5p-G2jErIV43ICgBDI_zrP0ULDbYDREr3eCGGj6K-z76xkLVQAfSQJJVzG_f2f_b5bN_b9xNdyHqAGksBPDTvjVJaiNen-MoitaKzWpuserahxeeFaERn-pvz906C7-FTgRW1545fawsx91crxMbwdCLfse163nPzfZMSNc7wweFc7--TdkGAtyUPZBHZj-ZhkDkvtEH7swVqLl1aOGy8XY8CniVu471Yb4F2DAqHfxeA8RmFNZUiH5kL4Id8ig4o5LVkXV2i4g
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/api/articles?author=lewii
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTY4MDMyLCJpYXQiOjE2ODIxNjQ0MzJ9.LEhX4kw0WCPu0sjVkqt_01obwfIl9pn8v1FkwpC8OU7YuTGhFmr2SkAWMVatNgzsJvFnM-nQR1J5p-G2jErIV43ICgBDI_zrP0ULDbYDREr3eCGGj6K-z76xkLVQAfSQJJVzG_f2f_b5bN_b9xNdyHqAGksBPDTvjVJaiNen-MoitaKzWpuserahxeeFaERn-pvz906C7-FTgRW1545fawsx91crxMbwdCLfse163nPzfZMSNc7wweFc7--TdkGAtyUPZBHZj-ZhkDkvtEH7swVqLl1aOGy8XY8CniVu471Yb4F2DAqHfxeA8RmFNZUiH5kL4Id8ig4o5LVkXV2i4g
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/api/articles?author=lewii
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTY4MDMyLCJpYXQiOjE2ODIxNjQ0MzJ9.LEhX4kw0WCPu0sjVkqt_01obwfIl9pn8v1FkwpC8OU7YuTGhFmr2SkAWMVatNgzsJvFnM-nQR1J5p-G2jErIV43ICgBDI_zrP0ULDbYDREr3eCGGj6K-z76xkLVQAfSQJJVzG_f2f_b5bN_b9xNdyHqAGksBPDTvjVJaiNen-MoitaKzWpuserahxeeFaERn-pvz906C7-FTgRW1545fawsx91crxMbwdCLfse163nPzfZMSNc7wweFc7--TdkGAtyUPZBHZj-ZhkDkvtEH7swVqLl1aOGy8XY8CniVu471Yb4F2DAqHfxeA8RmFNZUiH5kL4Id8ig4o5LVkXV2i4g
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/api/articles?author=lewii
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTY4MDMyLCJpYXQiOjE2ODIxNjQ0MzJ9.LEhX4kw0WCPu0sjVkqt_01obwfIl9pn8v1FkwpC8OU7YuTGhFmr2SkAWMVatNgzsJvFnM-nQR1J5p-G2jErIV43ICgBDI_zrP0ULDbYDREr3eCGGj6K-z76xkLVQAfSQJJVzG_f2f_b5bN_b9xNdyHqAGksBPDTvjVJaiNen-MoitaKzWpuserahxeeFaERn-pvz906C7-FTgRW1545fawsx91crxMbwdCLfse163nPzfZMSNc7wweFc7--TdkGAtyUPZBHZj-ZhkDkvtEH7swVqLl1aOGy8XY8CniVu471Yb4F2DAqHfxeA8RmFNZUiH5kL4Id8ig4o5LVkXV2i4g
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/api/articles?author=lewii
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTY4MDMyLCJpYXQiOjE2ODIxNjQ0MzJ9.LEhX4kw0WCPu0sjVkqt_01obwfIl9pn8v1FkwpC8OU7YuTGhFmr2SkAWMVatNgzsJvFnM-nQR1J5p-G2jErIV43ICgBDI_zrP0ULDbYDREr3eCGGj6K-z76xkLVQAfSQJJVzG_f2f_b5bN_b9xNdyHqAGksBPDTvjVJaiNen-MoitaKzWpuserahxeeFaERn-pvz906C7-FTgRW1545fawsx91crxMbwdCLfse163nPzfZMSNc7wweFc7--TdkGAtyUPZBHZj-ZhkDkvtEH7swVqLl1aOGy8XY8CniVu471Yb4F2DAqHfxeA8RmFNZUiH5kL4Id8ig4o5LVkXV2i4g
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/api/articles?author=lewii
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTY4MDMyLCJpYXQiOjE2ODIxNjQ0MzJ9.LEhX4kw0WCPu0sjVkqt_01obwfIl9pn8v1FkwpC8OU7YuTGhFmr2SkAWMVatNgzsJvFnM-nQR1J5p-G2jErIV43ICgBDI_zrP0ULDbYDREr3eCGGj6K-z76xkLVQAfSQJJVzG_f2f_b5bN_b9xNdyHqAGksBPDTvjVJaiNen-MoitaKzWpuserahxeeFaERn-pvz906C7-FTgRW1545fawsx91crxMbwdCLfse163nPzfZMSNc7wweFc7--TdkGAtyUPZBHZj-ZhkDkvtEH7swVqLl1aOGy8XY8CniVu471Yb4F2DAqHfxeA8RmFNZUiH5kL4Id8ig4o5LVkXV2i4g
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/api/articles?author=lewii
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTY4MDMyLCJpYXQiOjE2ODIxNjQ0MzJ9.LEhX4kw0WCPu0sjVkqt_01obwfIl9pn8v1FkwpC8OU7YuTGhFmr2SkAWMVatNgzsJvFnM-nQR1J5p-G2jErIV43ICgBDI_zrP0ULDbYDREr3eCGGj6K-z76xkLVQAfSQJJVzG_f2f_b5bN_b9xNdyHqAGksBPDTvjVJaiNen-MoitaKzWpuserahxeeFaERn-pvz906C7-FTgRW1545fawsx91crxMbwdCLfse163nPzfZMSNc7wweFc7--TdkGAtyUPZBHZj-ZhkDkvtEH7swVqLl1aOGy8XY8CniVu471Yb4F2DAqHfxeA8RmFNZUiH5kL4Id8ig4o5LVkXV2i4g
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-22T155355.200.json
+
+###
+
+GET http://localhost:8080/api/articles?author=lewii
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTY4MDMyLCJpYXQiOjE2ODIxNjQ0MzJ9.LEhX4kw0WCPu0sjVkqt_01obwfIl9pn8v1FkwpC8OU7YuTGhFmr2SkAWMVatNgzsJvFnM-nQR1J5p-G2jErIV43ICgBDI_zrP0ULDbYDREr3eCGGj6K-z76xkLVQAfSQJJVzG_f2f_b5bN_b9xNdyHqAGksBPDTvjVJaiNen-MoitaKzWpuserahxeeFaERn-pvz906C7-FTgRW1545fawsx91crxMbwdCLfse163nPzfZMSNc7wweFc7--TdkGAtyUPZBHZj-ZhkDkvtEH7swVqLl1aOGy8XY8CniVu471Yb4F2DAqHfxeA8RmFNZUiH5kL4Id8ig4o5LVkXV2i4g
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-22T155040.200.json
+
+###
+
+GET http://localhost:8080/api/articles?author=lewii&limit=1
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTY4MDMyLCJpYXQiOjE2ODIxNjQ0MzJ9.LEhX4kw0WCPu0sjVkqt_01obwfIl9pn8v1FkwpC8OU7YuTGhFmr2SkAWMVatNgzsJvFnM-nQR1J5p-G2jErIV43ICgBDI_zrP0ULDbYDREr3eCGGj6K-z76xkLVQAfSQJJVzG_f2f_b5bN_b9xNdyHqAGksBPDTvjVJaiNen-MoitaKzWpuserahxeeFaERn-pvz906C7-FTgRW1545fawsx91crxMbwdCLfse163nPzfZMSNc7wweFc7--TdkGAtyUPZBHZj-ZhkDkvtEH7swVqLl1aOGy8XY8CniVu471Yb4F2DAqHfxeA8RmFNZUiH5kL4Id8ig4o5LVkXV2i4g
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-22T151526.200.json
+
+###
+
+GET http://localhost:8080/api/articles?author=lewiii
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTY4MDMyLCJpYXQiOjE2ODIxNjQ0MzJ9.LEhX4kw0WCPu0sjVkqt_01obwfIl9pn8v1FkwpC8OU7YuTGhFmr2SkAWMVatNgzsJvFnM-nQR1J5p-G2jErIV43ICgBDI_zrP0ULDbYDREr3eCGGj6K-z76xkLVQAfSQJJVzG_f2f_b5bN_b9xNdyHqAGksBPDTvjVJaiNen-MoitaKzWpuserahxeeFaERn-pvz906C7-FTgRW1545fawsx91crxMbwdCLfse163nPzfZMSNc7wweFc7--TdkGAtyUPZBHZj-ZhkDkvtEH7swVqLl1aOGy8XY8CniVu471Yb4F2DAqHfxeA8RmFNZUiH5kL4Id8ig4o5LVkXV2i4g
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-22T151513.200.json
+
+###
+
+GET http://localhost:8080/api/articles?author=lewii
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTY4MDMyLCJpYXQiOjE2ODIxNjQ0MzJ9.LEhX4kw0WCPu0sjVkqt_01obwfIl9pn8v1FkwpC8OU7YuTGhFmr2SkAWMVatNgzsJvFnM-nQR1J5p-G2jErIV43ICgBDI_zrP0ULDbYDREr3eCGGj6K-z76xkLVQAfSQJJVzG_f2f_b5bN_b9xNdyHqAGksBPDTvjVJaiNen-MoitaKzWpuserahxeeFaERn-pvz906C7-FTgRW1545fawsx91crxMbwdCLfse163nPzfZMSNc7wweFc7--TdkGAtyUPZBHZj-ZhkDkvtEH7swVqLl1aOGy8XY8CniVu471Yb4F2DAqHfxeA8RmFNZUiH5kL4Id8ig4o5LVkXV2i4g
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-22T151508.200.json
+
+###
+
+GET http://localhost:8080/api/articles
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTY4MDMyLCJpYXQiOjE2ODIxNjQ0MzJ9.LEhX4kw0WCPu0sjVkqt_01obwfIl9pn8v1FkwpC8OU7YuTGhFmr2SkAWMVatNgzsJvFnM-nQR1J5p-G2jErIV43ICgBDI_zrP0ULDbYDREr3eCGGj6K-z76xkLVQAfSQJJVzG_f2f_b5bN_b9xNdyHqAGksBPDTvjVJaiNen-MoitaKzWpuserahxeeFaERn-pvz906C7-FTgRW1545fawsx91crxMbwdCLfse163nPzfZMSNc7wweFc7--TdkGAtyUPZBHZj-ZhkDkvtEH7swVqLl1aOGy8XY8CniVu471Yb4F2DAqHfxeA8RmFNZUiH5kL4Id8ig4o5LVkXV2i4g
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-22T151455.200.json
+
+###
+
 GET http://localhost:8080/api/articles
 Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMTY4MDMyLCJpYXQiOjE2ODIxNjQ0MzJ9.LEhX4kw0WCPu0sjVkqt_01obwfIl9pn8v1FkwpC8OU7YuTGhFmr2SkAWMVatNgzsJvFnM-nQR1J5p-G2jErIV43ICgBDI_zrP0ULDbYDREr3eCGGj6K-z76xkLVQAfSQJJVzG_f2f_b5bN_b9xNdyHqAGksBPDTvjVJaiNen-MoitaKzWpuserahxeeFaERn-pvz906C7-FTgRW1545fawsx91crxMbwdCLfse163nPzfZMSNc7wweFc7--TdkGAtyUPZBHZj-ZhkDkvtEH7swVqLl1aOGy8XY8CniVu471Yb4F2DAqHfxeA8RmFNZUiH5kL4Id8ig4o5LVkXV2i4g
 Connection: Keep-Alive
@@ -130,322 +592,6 @@ User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 <> 2023-04-22T143236.200.json
-
-###
-
-GET http://localhost:8080/api/articles/author/lewii?limit=1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-04-22T143229.200.json
-
-###
-
-GET http://localhost:8080/api/articles/author/lewii/?limit=1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/api/articles/author/lewii/?limit=1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/api/articles/author/lewii
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-04-22T143032.200.json
-
-###
-
-GET http://localhost:8080/api/articles/author/lewii/?limit=2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/api/articles/author/lewii?limit=2
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-04-22T142933.200.json
-
-###
-
-GET http://localhost:8080/api/articles/author/lewii?limit=1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-04-22T142928.200.json
-
-###
-
-GET http://localhost:8080/api/articles/author/lewii/?limit=1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/api/articles/author/lewii/?limit=1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/api/articles/author/lewii/?limit=1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/api/articles/author/lewii
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-04-22T142849.200.json
-
-###
-
-GET http://localhost:8080/api/articles/author/lewii?limit=1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-04-22T142819.200.json
-
-###
-
-GET http://localhost:8080/api/articles/author/lewii
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-04-22T142543.200.json
-
-###
-
-GET http://localhost:8080/api/articles/author/lewiclancy
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-04-22T142533.200.json
-
-###
-
-GET http://localhost:8080/api/articles/author/lewiclancy
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-04-22T142417.200.json
-
-###
-
-POST http://localhost:8080/users/login
-Content-Type: application/json
-Content-Length: 74
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user": {
-    "email": "lewis@gmail.com",
-    "password": "9326"
-  }
-}
-
-###
-
-POST http://localhost:8080/users/login
-Content-Type: application/json
-Content-Length: 74
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user": {
-    "email": "lewis@gmail.com",
-    "password": "9326"
-  }
-}
-
-###
-
-POST http://localhost:8080/users/login
-Content-Type: application/json
-Content-Length: 74
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user": {
-    "email": "lewis@gmail.com",
-    "password": "9326"
-  }
-}
-
-###
-
-POST http://localhost:8080/users/login
-Content-Type: application/json
-Content-Length: 74
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user": {
-    "email": "lewis@gmail.com",
-    "password": "9326"
-  }
-}
-
-###
-
-GET http://localhost:8080/api/articles/author/lewiclancy
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/api/articles/author/lewiclancy
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/api/articles/author/lewiclancy
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/api/articles/author/lewiclancy
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/api/articles/lewiclancy
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/api/profiles/lewii
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-04-21T181029.200.json
-
-###
-
-GET http://localhost:8080/api/articles
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/articles
-Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMDkyMDg0LCJpYXQiOjE2ODIwODg0ODR9.QE-7MXfRN86TzUU_-5dFlwnTbuGvAG-KjXt-Ehrn8WM_VEQ197hRcrOHIj02NyrDtUczpLmPOZ3exhRCvedi3SqZBSmNnQ2u0Dq_8DXvlif7HwprS8xXL1GGz3YRq8dgaoWBBZ8tINzNUH7mcrzsWru7ynqOu5yVrh1Z2_7JQVXJxnSLjDYwUYIBJoNoD-hjDCF3j54R-DBDRpELMwqzRnalbsoZWRK1QrJo7NC-_szjYqkGWka59a246oCsw7vRknR_CPdLbr01cy6ted-DQUoaQSM58rN3Pktc-YZRoNAfcfC8dMOvT-NotxyM_XRGsJE6NNKTg8t_0Sf2x26pkw
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-04-21T175342.200.json
-
-###
-
-GET http://localhost:8080/articles/hello-world
-Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMDkyMDg0LCJpYXQiOjE2ODIwODg0ODR9.QE-7MXfRN86TzUU_-5dFlwnTbuGvAG-KjXt-Ehrn8WM_VEQ197hRcrOHIj02NyrDtUczpLmPOZ3exhRCvedi3SqZBSmNnQ2u0Dq_8DXvlif7HwprS8xXL1GGz3YRq8dgaoWBBZ8tINzNUH7mcrzsWru7ynqOu5yVrh1Z2_7JQVXJxnSLjDYwUYIBJoNoD-hjDCF3j54R-DBDRpELMwqzRnalbsoZWRK1QrJo7NC-_szjYqkGWka59a246oCsw7vRknR_CPdLbr01cy6ted-DQUoaQSM58rN3Pktc-YZRoNAfcfC8dMOvT-NotxyM_XRGsJE6NNKTg8t_0Sf2x26pkw
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-04-21T175328.500.json
-
-###
-
-GET http://localhost:8080/articles
-Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMDczNjAwLCJpYXQiOjE2ODIwNzAwMDB9.U2kAotW5JQv_6zzNWosK2Of50vFIztLBH76_8RGz1PNSoj6UPXtnc5UX6axa3Layo6lG_B0N5YrN34rB1QWx6YmfExqxcp5L-x59PJbXLzXOTqb2qB-g5B4Vf2knvLUJnKn3FG2ZpIw22Hh1utswk4mo-XvDzu9O6WAyyXAh__XIC911F8ElEvvGAPVlnrgqRoIULdyMYs2CZNM82IyjOzwU1o8QV5hd_3RoYBpBAF9auD____GqZA2gUgu8K_8VNcEKwVaidRImvuvM1mX9myZU9rX8tuFmbb9eAMeaiT11Anq2c8HsO-eoWLxu2ufcpteMxDzvcG2lZgZ49LNdwA
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/articles
-Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMDczNjAwLCJpYXQiOjE2ODIwNzAwMDB9.U2kAotW5JQv_6zzNWosK2Of50vFIztLBH76_8RGz1PNSoj6UPXtnc5UX6axa3Layo6lG_B0N5YrN34rB1QWx6YmfExqxcp5L-x59PJbXLzXOTqb2qB-g5B4Vf2knvLUJnKn3FG2ZpIw22Hh1utswk4mo-XvDzu9O6WAyyXAh__XIC911F8ElEvvGAPVlnrgqRoIULdyMYs2CZNM82IyjOzwU1o8QV5hd_3RoYBpBAF9auD____GqZA2gUgu8K_8VNcEKwVaidRImvuvM1mX9myZU9rX8tuFmbb9eAMeaiT11Anq2c8HsO-eoWLxu2ufcpteMxDzvcG2lZgZ49LNdwA
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/articles
-Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMDczNjAwLCJpYXQiOjE2ODIwNzAwMDB9.U2kAotW5JQv_6zzNWosK2Of50vFIztLBH76_8RGz1PNSoj6UPXtnc5UX6axa3Layo6lG_B0N5YrN34rB1QWx6YmfExqxcp5L-x59PJbXLzXOTqb2qB-g5B4Vf2knvLUJnKn3FG2ZpIw22Hh1utswk4mo-XvDzu9O6WAyyXAh__XIC911F8ElEvvGAPVlnrgqRoIULdyMYs2CZNM82IyjOzwU1o8QV5hd_3RoYBpBAF9auD____GqZA2gUgu8K_8VNcEKwVaidRImvuvM1mX9myZU9rX8tuFmbb9eAMeaiT11Anq2c8HsO-eoWLxu2ufcpteMxDzvcG2lZgZ49LNdwA
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/articles
-Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMDczNjAwLCJpYXQiOjE2ODIwNzAwMDB9.U2kAotW5JQv_6zzNWosK2Of50vFIztLBH76_8RGz1PNSoj6UPXtnc5UX6axa3Layo6lG_B0N5YrN34rB1QWx6YmfExqxcp5L-x59PJbXLzXOTqb2qB-g5B4Vf2knvLUJnKn3FG2ZpIw22Hh1utswk4mo-XvDzu9O6WAyyXAh__XIC911F8ElEvvGAPVlnrgqRoIULdyMYs2CZNM82IyjOzwU1o8QV5hd_3RoYBpBAF9auD____GqZA2gUgu8K_8VNcEKwVaidRImvuvM1mX9myZU9rX8tuFmbb9eAMeaiT11Anq2c8HsO-eoWLxu2ufcpteMxDzvcG2lZgZ49LNdwA
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/articles
-Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMDczNjAwLCJpYXQiOjE2ODIwNzAwMDB9.U2kAotW5JQv_6zzNWosK2Of50vFIztLBH76_8RGz1PNSoj6UPXtnc5UX6axa3Layo6lG_B0N5YrN34rB1QWx6YmfExqxcp5L-x59PJbXLzXOTqb2qB-g5B4Vf2knvLUJnKn3FG2ZpIw22Hh1utswk4mo-XvDzu9O6WAyyXAh__XIC911F8ElEvvGAPVlnrgqRoIULdyMYs2CZNM82IyjOzwU1o8QV5hd_3RoYBpBAF9auD____GqZA2gUgu8K_8VNcEKwVaidRImvuvM1mX9myZU9rX8tuFmbb9eAMeaiT11Anq2c8HsO-eoWLxu2ufcpteMxDzvcG2lZgZ49LNdwA
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/articles
-Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMDc3MzY0LCJpYXQiOjE2ODIwNzM3NjR9.EnB7l9u_vOA_oVFSCDfXptSY5YPjO8EpQVGaOZgKO41z4OdLqIjcry1iW94PrC7bP7hRw66ACQU2pWP43F8vfzXFPV75YJ3DmIDJU6Mi6uxY9DqsiNUAsYDgMLNq8gwJeEhdG0UxAkVicos3QdgoZD-RuRtElaodynVu8KYMCtJzQvbcuYvow30gkMdeviyu3mUCrAT8_7GcCBvOmKGj4pV7C3-U1BPj7a3ertiODxYMq9_0msRmLt_Z398lOUob7QWZbq1QCS132TZW9-sAVHH_dm-ZyJDyKZl0l5RISRTdeAWg58WxQA-lQhvuZMmr9H5EeBb3kzrqoRWiKAnoPw
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/articles/hello-world
-Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibGV3aXNAZ21haWwuY29tIiwiZXhwIjoxNjgyMDkyMDg0LCJpYXQiOjE2ODIwODg0ODR9.QE-7MXfRN86TzUU_-5dFlwnTbuGvAG-KjXt-Ehrn8WM_VEQ197hRcrOHIj02NyrDtUczpLmPOZ3exhRCvedi3SqZBSmNnQ2u0Dq_8DXvlif7HwprS8xXL1GGz3YRq8dgaoWBBZ8tINzNUH7mcrzsWru7ynqOu5yVrh1Z2_7JQVXJxnSLjDYwUYIBJoNoD-hjDCF3j54R-DBDRpELMwqzRnalbsoZWRK1QrJo7NC-_szjYqkGWka59a246oCsw7vRknR_CPdLbr01cy6ted-DQUoaQSM58rN3Pktc-YZRoNAfcfC8dMOvT-NotxyM_XRGsJE6NNKTg8t_0Sf2x26pkw
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-04-21T175159.200.json
 
 ###
 

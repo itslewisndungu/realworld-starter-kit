@@ -58,4 +58,22 @@ public class ArticleController {
     public void deleteArticle(@PathVariable String slug) {
         this.articleService.deleteArticle(slug);
     }
+
+    @DeleteMapping("/{slug}/favorite")
+    public ArticleResponse unfavoriteArticle(@PathVariable String slug, User user) {
+        var article = this.articleService.favoriteOrUnfavoriteArticle(slug, user);
+        return new ArticleResponse(article);
+    }
+
+    @PostMapping("/{slug}/favorite")
+    public ArticleResponse favoriteArticle(@PathVariable String slug, User user) {
+        var article = this.articleService.favoriteOrUnfavoriteArticle(slug, user);
+        return new ArticleResponse(article);
+    }
+
+//    @PostMapping("/{slug}/favorite")
+//    public ArticleResponse favoriteArticle(@PathVariable String slug, User user) {
+//        var article = this.articleService.favoriteOrUnfavoriteArticle(slug, user);
+//        return new ArticleResponse(article);
+//    }
 }
