@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
 import java.util.Optional;
 
 
@@ -27,4 +28,6 @@ public interface ArticleRepository extends JpaRepository<Article, Integer> {
             @Param("tag") String tag,
             Pageable pageable
     );
+
+    Page<Article> findByAuthorInOrderByCreatedAt(Collection<User> author, Pageable pageable);
 }
