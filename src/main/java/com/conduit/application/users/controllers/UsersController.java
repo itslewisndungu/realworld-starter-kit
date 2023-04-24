@@ -16,14 +16,14 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.View;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 @RequiredArgsConstructor
 public class UsersController {
     private final AuthService authService;
 
     @PostMapping("/login")
     public UserResponse getToken(@Valid @RequestBody SignInRequest req) {
-        var user =  authService.signIn(req);
+        var user = authService.signIn(req);
         return new UserResponse(user);
     }
 
@@ -36,7 +36,7 @@ public class UsersController {
         return new ModelAndView(
                 "redirect:/users/login",
                 "user",
-                new SignInRequest(user.getEmail(), user.getPassword())
+                new SignInRequest(user.email(), user.password())
         );
     }
 }

@@ -3,20 +3,22 @@ package com.conduit.domain.content;
 
 import com.conduit.domain.user.User;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
+import lombok.experimental.Accessors;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+@EntityListeners(AuditingEntityListener.class)
+@Accessors(chain = true, fluent = true)
+@Data
 public class Article {
     @Id
     @GeneratedValue
@@ -35,12 +37,10 @@ public class Article {
     private String body;
 
     @CreatedDate
-    @Temporal(value = TemporalType.TIMESTAMP)
-    private Instant createdAt;
+    private LocalDateTime createdAt;
 
     @LastModifiedDate
-    @Temporal(value = TemporalType.TIMESTAMP)
-    private Instant updatedAt;
+    private LocalDateTime updatedAt;
 
     @ManyToOne
     @JoinColumn(name = "author_id")
@@ -56,4 +56,24 @@ public class Article {
             inverseJoinColumns = @JoinColumn(name = "user_id")
     )
     private List<User> favourites = new ArrayList<>();
+
+    public Article favoriteOrUnfavoriteArticle(User user) {
+        var favorites = this.favourites();
+
+        if (favorites.contains(user)) {
+            favorites.remove(user);
+        } else {
+            favorites.add(user);
+        }
+
+        return this;
+    }
+
+    @ManyToMany
+    @JoinTable(
+            name = "article_tag",
+            joinColumns = @JoinColumn(name = "article_id"),
+            inverseJoinColumns = @JoinColumn(name = "tag_id")
+    )
+    private Set<Tag> tagsList = new HashSet<>();
 }
