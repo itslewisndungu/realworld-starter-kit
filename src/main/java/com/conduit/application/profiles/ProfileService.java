@@ -23,7 +23,7 @@ public class ProfileService {
     }
 
     public void followUser(User me, String userToFollowUsername) {
-
+//        me.follow();
     }
 
 }
