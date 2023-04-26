@@ -28,12 +28,6 @@ public class ArticleService {
     private final AuthorizedArticleService authorizedArticleService;
 
 
-    @PreAuthorize("authentication.getName == #name")
-    public void testAuth(String name) {
-        System.out.println(name);
-    }
-
-
     public List<ArticleVO> retrieveAllArticles(User user, ArticleFacets facets) {
         var pageable = PageRequest.of(facets.offset(), facets.limit());
 

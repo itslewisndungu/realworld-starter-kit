@@ -18,11 +18,6 @@ import org.springframework.web.bind.annotation.*;
 public class ArticleController {
     private final ArticleService articleService;
 
-    @PostMapping("/name/{thename}")
-    public void tryName(@PathVariable String thename, User user){
-        this.articleService.testAuth(thename);
-    }
-
     @GetMapping
     public MultipleArticlesResponse getAllArticles(
             User user,
@@ -76,10 +71,4 @@ public class ArticleController {
         var article = this.articleService.favoriteOrUnfavoriteArticle(slug, user);
         return new ArticleResponse(article);
     }
-
-//    @PostMapping("/{slug}/favorite")
-//    public ArticleResponse favoriteArticle(@PathVariable String slug, User user) {
-//        var article = this.articleService.favoriteOrUnfavoriteArticle(slug, user);
-//        return new ArticleResponse(article);
-//    }
 }
