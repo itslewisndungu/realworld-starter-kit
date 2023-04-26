@@ -1,4 +1,4 @@
-package com.conduit.application.articles.services;
+package com.conduit.application.articles;
 
 import com.conduit.application.articles.requests.ArticleFacets;
 import com.conduit.application.articles.requests.CreateArticleRequest;
@@ -11,6 +11,7 @@ import com.conduit.domain.content.Tag;
 import com.conduit.domain.user.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -24,6 +25,14 @@ import java.util.stream.Collectors;
 public class ArticleService {
     private final ArticleRepository repository;
     private final TagService tagService;
+    private final AuthorizedArticleService authorizedArticleService;
+
+
+    @PreAuthorize("authentication.getName == #name")
+    public void testAuth(String name) {
+        System.out.println(name);
+    }
+
 
     public List<ArticleVO> retrieveAllArticles(User user, ArticleFacets facets) {
         var pageable = PageRequest.of(facets.offset(), facets.limit());
@@ -75,19 +84,29 @@ public class ArticleService {
                         () -> new NoSuchElementException(String.format("Article with the slug %s not found", slug))
                 );
 
-        oldArticle.title(request.title());
-        oldArticle.body(request.body());
-        oldArticle.description(request.description());
+        if (request.title().isPresent()) {
+            oldArticle.title(request.title().get());
+        }
 
-        var updatedArticle = this.repository.save(oldArticle);
-        return new ArticleVO(updatedArticle, null);
+        if (request.body().isPresent()) {
+            oldArticle.body(request.body().get());
+        }
+
+        if (request.description().isPresent()) {
+            oldArticle.description(request.description().get());
+        }
+
+        var updatedArticle = this.authorizedArticleService.update(oldArticle);
+        return new ArticleVO(updatedArticle, user);
     }
+
 
     public void deleteArticle(String slug) {
         Article article = this.repository.getArticleBySlug(slug).orElseThrow(
                 () -> new NoSuchElementException(String.format("Article with the slug %s not found", slug))
         );
-        this.repository.delete(article);
+
+        this.authorizedArticleService.delete(article);
     }
 
     public ArticleVO favoriteOrUnfavoriteArticle(String slug, User me) {

@@ -1,14 +1,15 @@
-package com.conduit.application.articles.controllers;
+package com.conduit.application.articles;
 
 import com.conduit.application.articles.requests.ArticleFacets;
 import com.conduit.application.articles.requests.CreateArticleRequest;
 import com.conduit.application.articles.requests.UpdateArticleRequest;
 import com.conduit.application.articles.response.ArticleResponse;
 import com.conduit.application.articles.response.MultipleArticlesResponse;
-import com.conduit.application.articles.services.ArticleService;
 import com.conduit.domain.user.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -16,6 +17,11 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class ArticleController {
     private final ArticleService articleService;
+
+    @PostMapping("/name/{thename}")
+    public void tryName(@PathVariable String thename, User user){
+        this.articleService.testAuth(thename);
+    }
 
     @GetMapping
     public MultipleArticlesResponse getAllArticles(
